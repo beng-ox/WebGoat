@@ -21,8 +21,3 @@ jobs:
       run: |
         docker build -t ${{ secrets.DOCKER_USERNAME }}/webgoat .
         docker push ${{ secrets.DOCKER_USERNAME }}/webgoat
-
-    - name: Build and push NodeGoat Docker image
-      run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/nodegoat .
-        docker push ${{ secrets.DOCKER_USERNAME }}/nodegoat
