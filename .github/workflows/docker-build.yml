@@ -21,6 +21,10 @@ jobs:
         username: bengdemo
         password: zaq12wsx
 
+or
+        with:
+        username: bengdemo_randomtest5
+        password: zaq12wsxbengdemo_randomtest5
     - name: Build and push WebGoat Docker image
       run: |
         docker build -t ${{ secrets.DOCKER_USERNAME }}/webgoat .
