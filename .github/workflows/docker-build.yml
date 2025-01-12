@@ -23,6 +23,6 @@ jobs:
 
     - name: Build and push WebGoat Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/webgoat .
-        docker push ${{ secrets.DOCKER_USERNAME }}/webgoat
+        docker build -t ${{ secrets.DOCKER_USERNAME }}
+        docker push ${{ secrets.DOCKER_USERNAME }}
 #added comments for filler
