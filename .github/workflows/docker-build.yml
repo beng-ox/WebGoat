@@ -15,7 +15,7 @@ jobs:
       uses: docker/login-action@v2
       with:
         username: bengdocker
-        password:123456789zaq1
+        password: secret123
         #password: dckr_pat_4hx38SiTfqweucG-onJ2bpMTlBA
         
         username: ${{ secrets.DOCKER_USERNAME }}
