@@ -1,9 +1,9 @@
 name: Check on Invalid PR
 
 on:
-  pull_request_target:
-    branches:
-      - main
+
+on:
+  workflow_dispatch:
     paths-ignore:
       - '.github/**'
       - 'data.json'
