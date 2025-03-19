@@ -1,0 +1,25 @@
+name: Build
+
+on:
+  workflow_dispatch:
+    branches:
+      - main
+    paths:
+      - 'data.json'
+      - '.github/tpl.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: install jinja2
+        run: sudo pip install jinja2
+      - name: Build
+        run: python3 .github/scripts/render-readme.py
+      - name: Commit
+        run: |
+          git config --global user.name 'Shmavon Gazanchyan'
+          git config --global user.email 'MunGell@users.noreply.github.com'
+          git commit -am "Update README.md"
+          git push
